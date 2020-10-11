@@ -2,7 +2,8 @@
 
 echo -e "Entert= the no of time you want to flip coin : \c" 
 read number
-coins=3
+echo -e "how many coins :\c"
+read coins
 declare -A dictionary
 H=0
 T=0
@@ -27,4 +28,4 @@ done
 }
 
 coin
-echo "${!dictionary[@]} : ${dictionary[@]}"
+echo $(printf "%s\n" ${!dictionary[@]} : ${dictionary[@]} | sort -n)
